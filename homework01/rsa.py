@@ -20,8 +20,10 @@ def gcd(a: int, b: int) -> int:
     >>> gcd(3, 7)
     1
     """
+    if (b==0):
+            return  a
+    return gcd(b, a%b)
     # PUT YOUR CODE HERE
-    pass
 
 
 def multiplicative_inverse(e: int, phi: int) -> int:
