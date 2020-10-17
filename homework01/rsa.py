@@ -37,17 +37,14 @@ def multiplicative_inverse(e: int, phi: int) -> int:
 
     # PUT YOUR CODE HERE
     d = 0
-    if phi == 1:
-        print(d)
-    else:
+    if phi != 1:
         multiple = 1
         while d == 0:
             if (multiple) % e == 0:
                 d = multiple / e
                 break
             multiple += phi
-        print(d)
-    return d
+    return int(d)
 
 
 def generate_keypair(p: int, q: int) -> tp.Tuple[tp.Tuple[int, int], tp.Tuple[int, int]]:
